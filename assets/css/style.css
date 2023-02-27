@@ -2,6 +2,7 @@
 @import "fonts.css";
 
 @import "header.css";
+@import "breadcrumbs.css";
 
 /* BLOCKS */
 @import "store-info.css";
