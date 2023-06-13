@@ -5,4 +5,18 @@
 {% block body %}
     {% set headerImageUrl = base_url ~ "/assets/images/stores/stores-header.jpg" %}
     {{ include('blocks/page-header.html.twig') }}
+
+    <section class="stores-section" style="height:800px">
+        <div class="page-content">
+            <div class="row">
+                {% for store in storesData %}
+                    <div class="col-4">
+                        <div class="stores-section_image">
+                            <img src="{{ base_url }}/assets/images/stores/{{ store.image_name }}" alt="{{ store.name }}">
+                        </div>
+                    </div> 
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

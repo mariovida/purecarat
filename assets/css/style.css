@@ -16,6 +16,7 @@
 @import "hero.css";
 @import "display-section.css";
 @import "single-item.css";
+@import "stores-section.css";
 
 * {
   margin: 0;

@@ -1,0 +1,15 @@
+.stores-section {
+  margin-top: 40px;
+}
+.stores-section .row {
+  gap: 28px 0;
+}
+.stores-section_image {
+  height: 350px;
+  overflow: hidden;
+}
+.stores-section_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
