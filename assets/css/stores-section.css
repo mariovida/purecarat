@@ -14,6 +14,17 @@
   object-fit: cover;
 }
 .stores-section_info {
-  padding: 12px;
+  padding: 24px 16px;
   background-color: var(--vz-beige);
+}
+.stores-section_info h4 {
+  font-family: ff-title;
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.stores-section_info h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
