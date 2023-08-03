@@ -22,14 +22,12 @@ $uri = $_SERVER['REQUEST_URI'];
 $base_url = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
 $twig->addGlobal('base_url', $base_url);
 
-//$ringsData = json_decode(file_get_contents('./data/rings.json'), true);
-//$menJewelryData = json_decode(file_get_contents('./data/men.json'), true);
-
 // RINGS
 $query = "SELECT * FROM rings";
 $statement = $pdo->prepare($query);
 $statement->execute();
 $ringsData = $statement->fetchAll(PDO::FETCH_ASSOC);
+shuffle($ringsData);
 
 $query = "SELECT * FROM ring_images";
 $statement = $pdo->prepare($query);
@@ -55,6 +53,7 @@ $query = "SELECT * FROM men_jewelry";
 $statement = $pdo->prepare($query);
 $statement->execute();
 $menJewelryData = $statement->fetchAll(PDO::FETCH_ASSOC);
+shuffle($menJewelryData);
 
 $query = "SELECT * FROM men_jewelry_images";
 $statement = $pdo->prepare($query);
@@ -80,6 +79,7 @@ $query = "SELECT * FROM earrings";
 $statement = $pdo->prepare($query);
 $statement->execute();
 $earringsData = $statement->fetchAll(PDO::FETCH_ASSOC);
+shuffle($earringsData);
 
 $query = "SELECT * FROM earrings_images";
 $statement = $pdo->prepare($query);
