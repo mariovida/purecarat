@@ -10,6 +10,7 @@
 /* BLOCKS */
 @import "store-info.css";
 @import "related-items.css";
+@import "page-header.css";
 
 /* INDEX PAGE */
 @import "hero.css";

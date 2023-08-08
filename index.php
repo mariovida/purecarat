@@ -100,6 +100,12 @@ foreach ($earringsData as &$item) {
     $item['images'] = isset($earringsImagesByItemId[$earringId]) ? $earringsImagesByItemId[$earringId] : [];
 }
 
+// STORES
+$query = "SELECT * FROM stores";
+$statement = $pdo->prepare($query);
+$statement->execute();
+$storesData = $statement->fetchAll(PDO::FETCH_ASSOC);
+
 if ($uri === $base_url.'/') {
     echo $twig->render('index.html.twig', [
         'ringsData' => $ringsData,
@@ -210,6 +216,10 @@ if ($uri === $base_url.'/') {
         'itemData' => $itemData,
         'images' => $earringsImages,
         'relatedData' => $earringsData,
+    ]);
+} else if ($uri === $base_url.'/stores') {
+    echo $twig->render('stores.html.twig', [
+        'storesData' => $storesData,
     ]);
 } else {
     echo $twig->render('404.html.twig');
