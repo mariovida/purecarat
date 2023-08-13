@@ -93,13 +93,12 @@
   font-weight: 600;
   text-decoration: none;
   padding: 8px 0;
-  color: var(--vz-gray-700);
-  background-color: transparent;
-  border: 1px solid var(--vz-gray-700);
+  color: var(--vz-gray-100);
+  background-color: var(--vz-header-bg);
+  border: 1px solid var(--vz-header-bg);
   transition: 0.3s;
 }
 .single-item_info button:hover {
-  color: var(--vz-gray-100);
-  background-color: var(--vz-green-light);
-  border-color: var(--vz-green-light);
+  background-color: var(--vz-green-dark);
+  border-color: var(--vz-green-dark);
 }
