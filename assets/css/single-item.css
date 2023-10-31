@@ -66,12 +66,26 @@
 .single-item_review span.checked::before {
   color: var(--vz-header-bg);
 }
+.single-item_description {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--vz-header-bg);
+}
 .single-item_description h6 {
   font-size: 15px;
   font-weight: 600;
+  margin-bottom: 24px;
 }
 .single-item_description p {
+  display: inline-flex;
+  align-items: center;
   font-size: 16px;
+  margin: 0;
+}
+.single-item_description p img {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
 }
 .single-item_info button {
   width: 100%;
