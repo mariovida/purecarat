@@ -25,6 +25,7 @@ $twig->addGlobal('base_url', $base_url);
 //$ringsData = json_decode(file_get_contents('./data/rings.json'), true);
 //$menJewelryData = json_decode(file_get_contents('./data/men.json'), true);
 
+// RINGS
 $query = "SELECT * FROM rings";
 $statement = $pdo->prepare($query);
 $statement->execute();
@@ -49,6 +50,7 @@ foreach ($ringsData as &$ring) {
     $ring['images'] = isset($ringImagesByRingId[$ringId]) ? $ringImagesByRingId[$ringId] : [];
 }
 
+// MEN JEWELRY
 $query = "SELECT * FROM men_jewelry";
 $statement = $pdo->prepare($query);
 $statement->execute();
@@ -73,12 +75,39 @@ foreach ($menJewelryData as &$item) {
     $item['images'] = isset($menJewelryImagesByItemId[$jewelryId]) ? $menJewelryImagesByItemId[$jewelryId] : [];
 }
 
+// EARRINGS
+$query = "SELECT * FROM earrings";
+$statement = $pdo->prepare($query);
+$statement->execute();
+$earringsData = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+$query = "SELECT * FROM earrings_images";
+$statement = $pdo->prepare($query);
+$statement->execute();
+$earringsImages = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+$earringsImagesByItemId = [];
+foreach ($earringsImages as $image) {
+    $earringId = $image['earring_id'];
+    if (!isset($earringsImagesByItemId[$earringId])) {
+        $earringsImagesByItemId[$earringId] = [];
+    }
+    $earringsImagesByItemId[$earringId][] = $image;
+}
+
+foreach ($earringsData as &$item) {
+    $earringId = $item['id'];
+    $item['images'] = isset($earringsImagesByItemId[$earringId]) ? $earringsImagesByItemId[$earringId] : [];
+}
+
 if ($uri === $base_url.'/') {
     echo $twig->render('index.html.twig', [
         'ringsData' => $ringsData,
         'ringImages' => $ringImages,
         'menJewelryData' => $menJewelryData,
-        'menJewelryImages' => $menJewelryImages
+        'menJewelryImages' => $menJewelryImages,
+        'earringsData' => $earringsData,
+        'earringsImages' => $earringsImages
     ]);
 } else if ($uri === $base_url.'/rings') {
     echo $twig->render('rings.html.twig', [
