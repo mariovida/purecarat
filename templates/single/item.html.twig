@@ -11,6 +11,8 @@
                         <p>Shop all > <a href="{{ base_url }}/rings">Rings</a> > <span>{{ itemData.name }}</span></p>
                     {% elseif category == 'men-jewelry' %}
                         <p>Shop all > <a href="{{ base_url }}/men-jewelry">Men jewelry</a> > <span>{{ itemData.name }}</span></p>
+                    {% elseif category == 'earrings' %}
+                        <p>Shop all > <a href="{{ base_url }}/earrings">Earrings</a> > <span>{{ itemData.name }}</span></p>
                     {% endif %}
                 </div>
             </div>
@@ -29,6 +31,8 @@
                                         <img src="{{ base_url }}/assets/images/rings/{{ image.filename }}" alt="{{ itemData.name }} Image">
                                     {% elseif category == 'men-jewelry' %}
                                         <img src="{{ base_url }}/assets/images/men/{{ image.filename }}" alt="{{ itemData.name }} Image">
+                                    {% elseif category == 'earrings' %}
+                                        <img src="{{ base_url }}/assets/images/earrings/{{ image.filename }}" alt="{{ itemData.name }} Image">
                                     {% endif %}
                                 </div>
                             {% endfor %}

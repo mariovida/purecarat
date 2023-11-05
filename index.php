@@ -176,6 +176,34 @@ if ($uri === $base_url.'/') {
         'itemData' => $itemData,
         'images' => $menJewelryImages,
     ]);
+} elseif (preg_match('#^'.$base_url.'/category/earrings/(\d+)$#', $uri, $matches)) {
+    $itemId = $matches[1];
+    $query = "SELECT * FROM earrings WHERE id = :id";
+    $statement = $pdo->prepare($query);
+    $statement->bindParam(':id', $itemId, PDO::PARAM_INT);
+    $statement->execute();
+    $itemData = $statement->fetch(PDO::FETCH_ASSOC);
+    
+    $query = "SELECT * FROM earrings_images WHERE earring_id = $itemId";
+    $statement = $pdo->prepare($query);
+    $statement->execute();
+    $earringsImages = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    $earringsImagesByItemId = [];
+    foreach ($earringsImages as $image) {
+        $jewelryId = $image['earring_id'];
+        if (!isset($earringsImagesByItemId[$jewelryId])) {
+            $earringsImagesByItemId[$jewelryId] = [];
+        }
+        $earringsImagesByItemId[$jewelryId][] = $image;
+    }
+    $twig->addGlobal('isCategoryPage', true);
+
+    echo $twig->render('single/item.html.twig', [
+        'category' => 'earrings',
+        'itemData' => $itemData,
+        'images' => $earringsImages,
+    ]);
 } else {
     echo $twig->render('404.html.twig');
 }
