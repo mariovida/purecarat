@@ -119,6 +119,11 @@ if ($uri === $base_url.'/') {
         'menJewelryData' => $menJewelryData,
         'menJewelryImages' => $menJewelryImages,
     ]);
+} else if ($uri === $base_url.'/earrings') {
+    echo $twig->render('earrings.html.twig', [
+        'earringsData' => $earringsData,
+        'earringsImages' => $earringsImages,
+    ]);
 } elseif (preg_match('#^'.$base_url.'/category/rings/(\d+)$#', $uri, $matches)) {
     $itemId = $matches[1];
     $query = "SELECT * FROM rings WHERE id = :id";
