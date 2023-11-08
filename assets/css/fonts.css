@@ -8,6 +8,11 @@
   src: url(../fonts/fancy.ttf);
   font-style: normal;
 }
+@font-face {
+  font-family: ff-title;
+  src: url(../fonts/BebasNeue.ttf);
+  font-style: normal;
+}
 
 @font-face {
   font-family: ff-primary;
