@@ -38,6 +38,7 @@ h3 {
   font-size: 28px;
   color: var(--vz-header-bg);
   margin: 0;
+  user-select: none;
 }
 a.explore-more {
   display: inline-flex;

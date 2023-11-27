@@ -19,10 +19,20 @@
   justify-content: center;
   align-items: center;
   align-items: stretch;
-  padding-bottom: 50px;
+  padding-bottom: 72px;
 }
 .swiper-slide .ring-section_image {
   height: 320px;
+  overflow: hidden;
+}
+.swiper-slide .ring-section_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.swiper-slide .ring-section_image:hover .ring-image {
+  transform: scale(1.1);
 }
 .swiper-slide .ring-section_info {
   display: flex;
@@ -38,12 +48,14 @@
   text-align: left;
   margin: 0;
 }
-.swiper-slide .ring-section_info span {
-  width: 100%;
+.swiper-slide .ring-section_price {
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+}
+.swiper-slide .ring-section_price span {
   font-size: 16px;
   font-weight: 600;
-  text-align: right;
-  margin: 0;
 }
 .swiper-slide .ring-section_btns {
   width: 100%;
