@@ -1,0 +1,29 @@
+{
+  "menjewelry": [
+    {
+      "id": 1,
+      "name": "Round Box Chain Bracelet",
+      "description": "Simple is always best when it comes to your every day. Not too bold, not too narrow, this chain was made to be worn. Handcrafted in 14k solid yellow gold. Plays well with the Round Box Chain Necklace.",
+      "price": "398.00",
+      "images": [
+        "/assets/images/men/1/braclet_1.jpg",
+        "/assets/images/men/1/braclet_2.jpg",
+        "/assets/images/men/1/braclet_3.jpg",
+        "/assets/images/men/1/braclet_4.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Flat Curb Chain Necklace",
+      "description": "The necklace that you never have to take off, goes with everything, and takes your look to another level—is this one.",
+      "price": "455.00",
+      "images": [
+        "/assets/images/men/2/necklace_1.jpg",
+        "/assets/images/men/2/necklace_2.jpg",
+        "/assets/images/men/2/necklace_3.jpg",
+        "/assets/images/men/2/necklace_4.jpg",
+        "/assets/images/men/2/necklace_5.jpg"
+      ]
+    }
+  ]
+}

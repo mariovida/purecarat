@@ -12,9 +12,13 @@ $base_url = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
 $twig->addGlobal('base_url', $base_url);
 
 $ringsData = json_decode(file_get_contents('./data/rings.json'), true);
+$menJewelryData = json_decode(file_get_contents('./data/men.json'), true);
 
 if ($uri === $base_url.'/') {
-    echo $twig->render('index.html.twig', ['ringsData' => $ringsData]);
+    echo $twig->render('index.html.twig', [
+        'ringsData' => $ringsData,
+        'menJewelryData' => $menJewelryData
+    ]);
 } else if ($uri === $base_url.'/rings') {
     echo $twig->render('rings.html.twig', ['ringsData' => $ringsData]);
 }
