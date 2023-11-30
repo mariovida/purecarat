@@ -1,0 +1,8 @@
+.not-found {
+  height: calc(100vh - 70px);
+}
+.not-found p {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
