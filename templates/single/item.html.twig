@@ -43,6 +43,15 @@
                     <div class="single-item_info">
                         <h5>{{ itemData.name }}</h5>
                         <h6>{{ (itemData.price/100)|number_format(2, ',', '.') }} €</h6>
+                        <div class="single-item_review">
+                            {% for i in range(1, 5) %}
+                                {% if i <= itemData.review %}
+                                    <span class="fa fa-star checked"></span>
+                                {% else %}
+                                    <span class="fa fa-star"></span>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>

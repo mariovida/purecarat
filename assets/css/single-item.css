@@ -53,3 +53,12 @@
 .single-item_info h6 {
   font-size: 18px;
 }
+.single-item_review {
+  margin: 18px 0 24px;
+}
+.single-item_review span::before {
+  color: var(--vz-gray-400);
+}
+.single-item_review span.checked::before {
+  color: var(--vz-header-bg);
+}
