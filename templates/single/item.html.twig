@@ -39,7 +39,12 @@
                     </div>
                 </div>
 
-                <div class="col-7"></div>
+                <div class="col-7">
+                    <div class="single-item_info">
+                        <h5>{{ itemData.name }}</h5>
+                        <h6>{{ (itemData.price/100)|number_format(2, ',', '.') }} €</h6>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

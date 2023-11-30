@@ -1,10 +1,12 @@
+/* LEFT PART */
 /*.single-item .page-content {
   max-width: 1440px;
   padding: 0 3rem;
 }*/
 .single-item .swiper {
   position: relative;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   max-height: 532px;
   height: 100%;
   margin: 0;
@@ -35,4 +37,19 @@
 .single-item .swiper .swiper-scrollbar {
   position: absolute;
   bottom: 0;
+}
+.single-item .swiper .swiper-scrollbar-drag {
+  cursor: pointer;
+}
+
+/* RIGHT PART */
+.single-item_info {
+  border-bottom: 1px solid var(--vz-header-bg);
+}
+.single-item_info h5 {
+  font-family: ff-fancy;
+  font-size: 24px;
+}
+.single-item_info h6 {
+  font-size: 18px;
 }
