@@ -1,11 +1,12 @@
-.single-item .page-content {
+/*.single-item .page-content {
   max-width: 1440px;
   padding: 0 3rem;
-}
+}*/
 .single-item .swiper {
   position: relative;
   width: 500px;
-  height: 532px;
+  max-height: 532px;
+  height: 100%;
   margin: 0;
   padding-bottom: 32px;
   /*padding: 0 30px;*/

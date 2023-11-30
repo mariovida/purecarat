@@ -19,23 +19,27 @@
 
     <section class="single-item">
         <div class="page-content">
-            <h2>{{ itemData.name }}</h2>
-            
-            <div class="swiper itemSwiper">
-                <div class="swiper-wrapper">
-                    {% for image in images %}
-                        <div class="swiper-slide">
-                            {% if category == 'ring' %}
-                                <img src="{{ base_url }}/assets/images/rings/{{ image.filename }}" alt="{{ itemData.name }} Image">
-                            {% elseif category == 'men-jewelry' %}
-                                <img src="{{ base_url }}/assets/images/men/{{ image.filename }}" alt="{{ itemData.name }} Image">
-                            {% endif %}
+            <div class="row">
+                <div class="col-5">
+                    <div class="swiper itemSwiper">
+                        <div class="swiper-wrapper">
+                            {% for image in images %}
+                                <div class="swiper-slide">
+                                    {% if category == 'ring' %}
+                                        <img src="{{ base_url }}/assets/images/rings/{{ image.filename }}" alt="{{ itemData.name }} Image">
+                                    {% elseif category == 'men-jewelry' %}
+                                        <img src="{{ base_url }}/assets/images/men/{{ image.filename }}" alt="{{ itemData.name }} Image">
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
                         </div>
-                    {% endfor %}
+                        {#<div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>#}
+                        <div class="swiper-scrollbar"></div>
+                    </div>
                 </div>
-                {#<div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>#}
-                <div class="swiper-scrollbar"></div>
+
+                <div class="col-7"></div>
             </div>
         </div>
     </section>
