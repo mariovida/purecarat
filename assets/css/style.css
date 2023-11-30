@@ -12,6 +12,7 @@
 /* INDEX PAGE */
 @import "hero.css";
 @import "display-section.css";
+@import "single-item.css";
 
 * {
   margin: 0;

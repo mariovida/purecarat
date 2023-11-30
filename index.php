@@ -96,10 +96,52 @@ if ($uri === $base_url.'/') {
     $statement->bindParam(':id', $itemId, PDO::PARAM_INT);
     $statement->execute();
     $itemData = $statement->fetch(PDO::FETCH_ASSOC);
+    
+    $query = "SELECT * FROM ring_images WHERE ring_id = $itemId";
+    $statement = $pdo->prepare($query);
+    $statement->execute();
+    $ringImages = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    $ringImagesByRingId = [];
+    foreach ($ringImages as $image) {
+        $ringId = $image['ring_id'];
+        if (!isset($ringImagesByRingId[$ringId])) {
+            $ringImagesByRingId[$ringId] = [];
+        }
+        $ringImagesByRingId[$ringId][] = $image;
+    }
 
     echo $twig->render('single/item.html.twig', [
         'category' => 'ring',
         'itemData' => $itemData,
+        'images' => $ringImages,
+    ]);
+} elseif (preg_match('#^'.$base_url.'/category/men-jewelry/(\d+)$#', $uri, $matches)) {
+    $itemId = $matches[1];
+    $query = "SELECT * FROM men_jewelry WHERE id = :id";
+    $statement = $pdo->prepare($query);
+    $statement->bindParam(':id', $itemId, PDO::PARAM_INT);
+    $statement->execute();
+    $itemData = $statement->fetch(PDO::FETCH_ASSOC);
+    
+    $query = "SELECT * FROM men_jewelry_images WHERE jewelry_id = $itemId";
+    $statement = $pdo->prepare($query);
+    $statement->execute();
+    $menJewelryImages = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    $menJewelryImagesByItemId = [];
+    foreach ($menJewelryImages as $image) {
+        $jewelryId = $image['jewelry_id'];
+        if (!isset($menJewelryImagesByItemId[$jewelryId])) {
+            $menJewelryImagesByItemId[$jewelryId] = [];
+        }
+        $menJewelryImagesByItemId[$jewelryId][] = $image;
+    }
+
+    echo $twig->render('single/item.html.twig', [
+        'category' => 'men-jewelry',
+        'itemData' => $itemData,
+        'images' => $menJewelryImages,
     ]);
 } else {
     echo $twig->render('404.html.twig');

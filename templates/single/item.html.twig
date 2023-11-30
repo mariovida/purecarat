@@ -9,11 +9,50 @@
                 <div class="col-12">
                     {% if category == 'ring' %}
                         <p>Shop all > <a href="{{ base_url }}/rings">Rings</a> > <span>{{ itemData.name }}</span></p>
-                    {% else %}
-                        <p>hey</p>
+                    {% elseif category == 'men-jewelry' %}
+                        <p>Shop all > <a href="{{ base_url }}/men-jewelry">Men jewelry</a> > <span>{{ itemData.name }}</span></p>
                     {% endif %}
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="single-item">
+        <div class="page-content">
+            <h2>{{ itemData.name }}</h2>
+            
+            <div class="swiper itemSwiper">
+                <div class="swiper-wrapper">
+                    {% for image in images %}
+                        <div class="swiper-slide">
+                            {% if category == 'ring' %}
+                                <img src="{{ base_url }}/assets/images/rings/{{ image.filename }}" alt="{{ itemData.name }} Image">
+                            {% elseif category == 'men-jewelry' %}
+                                <img src="{{ base_url }}/assets/images/men/{{ image.filename }}" alt="{{ itemData.name }} Image">
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+                {#<div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>#}
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.itemSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                draggable: true
+            },
+        });
+    </script>
 {% endblock %}
