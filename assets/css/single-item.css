@@ -44,7 +44,9 @@
 
 /* RIGHT PART */
 .single-item_info {
-  border-bottom: 1px solid var(--vz-header-bg);
+  float: right;
+  max-width: 600px;
+  width: 100%;
 }
 .single-item_info h5 {
   font-family: ff-fancy;
@@ -55,10 +57,28 @@
 }
 .single-item_review {
   margin: 18px 0 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--vz-header-bg);
 }
 .single-item_review span::before {
   color: var(--vz-gray-400);
 }
 .single-item_review span.checked::before {
   color: var(--vz-header-bg);
+}
+.single-item_info button {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 0;
+  color: var(--vz-gray-700);
+  background-color: transparent;
+  border: 1px solid var(--vz-gray-700);
+  transition: 0.3s;
+}
+.single-item_info button:hover {
+  color: var(--vz-gray-100);
+  background-color: var(--vz-green-light);
+  border-color: var(--vz-green-light);
 }

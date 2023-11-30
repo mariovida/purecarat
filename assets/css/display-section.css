@@ -4,6 +4,28 @@
 .display-section .row {
   gap: 40px 0;
 }
+.display-section a.explore-more {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--vz-header-bg);
+}
+.display-section a.explore-more::after {
+  position: relative;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAj0lEQVR4nO3YsQnDMBBA0Z8sEJO0tz+eII3JACkcu3DnYRIM2iCFdcd/oFbwOSSEQJIkSerUCDyBG8nNwBd4Z48JYG8xR9SdxKJqzMeYjifzILGyMYsxlSdzAda24ZlrBoZ/Qq7t4KUPOUtUOPRR4RoOIzpR4vEYFZ7zYUQnSkzisFX5fHgBU/YISZIkkcsPwUZ+ckKpJNQAAAAASUVORK5CYII=");
+  background-size: contain;
+  margin-left: 8px;
+  left: 0;
+  transition: left 0.3s;
+}
+.display-section a.explore-more:hover::after {
+  left: 4px;
+}
 .swiper {
   width: 100%;
   height: 100%;

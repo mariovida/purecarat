@@ -15,6 +15,7 @@ try {
 
 $loader = new \Twig\Loader\FilesystemLoader('./templates/');
 $twig = new \Twig\Environment($loader);
+$twig->addGlobal('isCategoryPage', false);
 
 $uri = $_SERVER['REQUEST_URI'];
 
@@ -110,11 +111,13 @@ if ($uri === $base_url.'/') {
         }
         $ringImagesByRingId[$ringId][] = $image;
     }
+    $twig->addGlobal('isCategoryPage', true);
 
     echo $twig->render('single/item.html.twig', [
         'category' => 'ring',
         'itemData' => $itemData,
         'images' => $ringImages,
+        'isCategoryPage' => true,
     ]);
 } elseif (preg_match('#^'.$base_url.'/category/men-jewelry/(\d+)$#', $uri, $matches)) {
     $itemId = $matches[1];
@@ -137,6 +140,7 @@ if ($uri === $base_url.'/') {
         }
         $menJewelryImagesByItemId[$jewelryId][] = $image;
     }
+    $twig->addGlobal('isCategoryPage', true);
 
     echo $twig->render('single/item.html.twig', [
         'category' => 'men-jewelry',
