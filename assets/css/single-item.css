@@ -66,6 +66,9 @@
 .single-item_review span.checked::before {
   color: var(--vz-header-bg);
 }
+.single-item_info_title {
+  font-size: 15px;
+}
 .single-item_info button {
   width: 100%;
   font-size: 15px;
