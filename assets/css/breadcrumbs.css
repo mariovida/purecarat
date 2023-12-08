@@ -5,6 +5,14 @@
   font-size: 15px;
   font-weight: 500;
 }
+.breadcrumbs p a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--vz-gray-700);
+}
+.breadcrumbs p a:hover {
+  color: var(--vz-header-bg);
+}
 .breadcrumbs span {
   text-decoration: underline;
 }

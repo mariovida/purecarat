@@ -89,4 +89,18 @@ if ($uri === $base_url.'/') {
         'menJewelryData' => $menJewelryData,
         'menJewelryImages' => $menJewelryImages,
     ]);
+} elseif (preg_match('#^'.$base_url.'/category/rings/(\d+)$#', $uri, $matches)) {
+    $itemId = $matches[1];
+    $query = "SELECT * FROM rings WHERE id = :id";
+    $statement = $pdo->prepare($query);
+    $statement->bindParam(':id', $itemId, PDO::PARAM_INT);
+    $statement->execute();
+    $itemData = $statement->fetch(PDO::FETCH_ASSOC);
+
+    echo $twig->render('single/item.html.twig', [
+        'category' => 'ring',
+        'itemData' => $itemData,
+    ]);
+} else {
+    echo $twig->render('404.html.twig');
 }

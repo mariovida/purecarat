@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Men jewelry | {% endblock %}
+
+{% block body %}
+   <section class="breadcrumbs">
+        <div class="page-content">
+            <div class="row">
+                <div class="col-12">
+                    {% if category == 'ring' %}
+                        <p>Shop all > <a href="{{ base_url }}/rings">Rings</a> > <span>{{ itemData.name }}</span></p>
+                    {% else %}
+                        <p>hey</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
