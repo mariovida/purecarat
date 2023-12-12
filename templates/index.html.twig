@@ -28,10 +28,10 @@
             </div>
             <div class="swiper displaySwiper">
                 <div class="swiper-wrapper">
-                    {% for ring in ringsData.rings %}
+                    {% for ring in ringsData %}
                         <div class="swiper-slide">
                             <div class="display-section_image">
-                                <img src="{{ base_url ~ ring.images[0] }}" alt="{{ ring.name }}" class="ring-image">
+                                <img src="{{ base_url }}/assets/images/rings/{{ ring.images[0].filename }}" alt="{{ ring.name }}" class="ring-image">
                             </div>
                             <div class="display-section_info">
                                 <h4>{{ ring.name }}</h4>
