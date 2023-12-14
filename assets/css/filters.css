@@ -1,0 +1,16 @@
+.filters button {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 4px 12px;
+  margin-right: 8px;
+  background-color: var(--vz-gray-300);
+  border: 1px solid var(--vz-gray-300);
+  transition: 0.2s;
+}
+.filters button:hover {
+  color: var(--vz-gray-100);
+  background-color: var(--vz-gray-600);
+  border-color: var(--vz-gray-600);
+}

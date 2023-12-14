@@ -1,18 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var filterButtons = document.querySelectorAll(".filter-button");
-  var ringItems = document.querySelectorAll(".ring-item");
+  $(".filters button").on("click", function () {
+    var selectedFilter = $(this).text().trim();
 
-  filterButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      var filter = button.dataset.filter;
-
-      ringItems.forEach(function (item) {
-        if (filter === "all" || item.dataset.filter === filter) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
-    });
+    if (selectedFilter === "All") {
+      $(".ring-item").show();
+    } else {
+      $(".ring-item").hide();
+      $(".ring-item[data-filter='" + selectedFilter + "']").show();
+    }
   });
 });
