@@ -38,7 +38,7 @@
                                 <p>{{ ring.description }}</p>
                             </div>
                             <div class="display-section_price">
-                                <span>{{ ring.price }} EUR</span>
+                                <span>{{ (ring.price/100)|number_format(2, '.', ',') }} EUR</span>
                             </div>
                             <div class="display-section_btns">
                                 <a href="{{ base_url }}">Add to cart</a>
