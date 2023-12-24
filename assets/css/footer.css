@@ -35,3 +35,12 @@ footer {
 .footer-links a:hover::after {
   width: 90%;
 }
+.footer-newsletter p {
+  font-size: 15px;
+  color: var(--vz-gray-100);
+}
+.footer-legal {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--vz-gray-100);
+}
