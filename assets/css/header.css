@@ -59,7 +59,6 @@ nav a::after {
   background: var(--vz-gray-300);
   transition: width 0.3s;
 }
-
 nav a:hover::after {
   width: 90%;
 }

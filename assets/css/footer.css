@@ -1,6 +1,37 @@
 footer {
-  height: 300px;
   margin-top: 60px;
+  padding: 60px 0;
   background-color: var(--vz-green-light);
   border-top: 5px solid var(--vz-green-dark);
+}
+.footer-links {
+  align-items: baseline;
+}
+.footer-links h6 {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--vz-gray-100);
+  margin-bottom: 16px;
+}
+.footer-links a {
+  display: inline-block;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--vz-gray-100);
+  margin-bottom: 6px;
+}
+.footer-links a:last-of-type {
+  margin: 0;
+}
+.footer-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--vz-gray-100);
+  transition: width 0.3s;
+}
+.footer-links a:hover::after {
+  width: 90%;
 }
