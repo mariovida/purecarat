@@ -7,8 +7,37 @@
         <div class="page-content">
             <div class="row">
                 <div class="col-12">
-                    <p>Rings page</p>
+                    <p>Shop all > <span>Rings</span></p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="display-section">
+        <div class="page-content">
+            <div class="row">
+                {% for ring in ringsData %}
+                    <div class="col-3">
+                        <div class="display-section_item">
+                            <div class="display-section_image">
+                                <img src="{{ base_url }}/assets/images/rings/{{ ring.images[0].filename }}" alt="{{ ring.name }}" class="ring-image">
+                            </div>
+                            <div class="display-section_info">
+                                <h4>{{ ring.name }}</h4>
+                                <p>{{ ring.description }}</p>
+                            </div>
+                            <div class="display-section_price">
+                                <span>{{ (ring.price/100)|number_format(2, '.', ',') }} EUR</span>
+                            </div>
+                            <div class="display-section_btns">
+                                <button class="add-to-cart" data-id="{{ ring.id }}">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    {% if loop.index % 4 == 0 %}
+                        </div><div class="row">
+                    {% endif %}
+                {% endfor %}  
             </div>
         </div>
     </section>

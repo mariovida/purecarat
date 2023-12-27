@@ -1,0 +1,10 @@
+.breadcrumbs {
+  margin-top: 40px;
+}
+.breadcrumbs p {
+  font-size: 15px;
+  font-weight: 500;
+}
+.breadcrumbs span {
+  text-decoration: underline;
+}
