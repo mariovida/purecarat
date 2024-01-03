@@ -54,10 +54,30 @@ if ($uri === $base_url.'/') {
     $statement->execute();
     $menJewelryData = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+    $query = "SELECT * FROM men_jewelry_images";
+    $statement = $pdo->prepare($query);
+    $statement->execute();
+    $menJewelryImages = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    $menJewelryImagesByItemId = [];
+    foreach ($menJewelryImages as $image) {
+        $jewelryId = $image['jewelry_id'];
+        if (!isset($menJewelryImagesByItemId[$jewelryId])) {
+            $menJewelryImagesByItemId[$jewelryId] = [];
+        }
+        $menJewelryImagesByItemId[$jewelryId][] = $image;
+    }
+
+    foreach ($menJewelryData as &$item) {
+        $jewelryId = $item['id'];
+        $item['images'] = isset($menJewelryImagesByItemId[$jewelryId]) ? $menJewelryImagesByItemId[$jewelryId] : [];
+    }
+
     echo $twig->render('index.html.twig', [
         'ringsData' => $ringsData,
         'ringImages' => $ringImages,
-        'menJewelryData' => $menJewelryData
+        'menJewelryData' => $menJewelryData,
+        'menJewelryImages' => $menJewelryImages
     ]);
 } else if ($uri === $base_url.'/rings') {
     echo $twig->render('rings.html.twig', ['ringsData' => $ringsData]);
