@@ -3,6 +3,7 @@
 
 @import "header.css";
 @import "breadcrumbs.css";
+@import "filters.css";
 
 /* BLOCKS */
 @import "store-info.css";
