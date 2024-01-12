@@ -3,14 +3,18 @@
   padding-top: 60px;
 }
 .store-info .row {
-  padding: 28px 0;
-  background-color: var(--vz-beige);
+  padding: 32px 0;
   background-color: var(--vz-beige-dark);
 }
 .store-info_items {
-  gap: 48px;
+  gap: 64px;
 }
-.store-info_items p {
+.store-info_item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+.store-info_item p {
   font-weight: 600;
   margin: 0;
 }
