@@ -1,6 +1,12 @@
 @import "colors.css";
 @import "fonts.css";
+
 @import "header.css";
+
+/* BLOCKS */
+@import "display-section.css";
+
+/* INDEX PAGE */
 @import "hero.css";
 @import "display-section.css";
 

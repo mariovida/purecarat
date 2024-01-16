@@ -6,10 +6,10 @@
       "description": "Simple is always best when it comes to your every day. Not too bold, not too narrow, this chain was made to be worn. Handcrafted in 14k solid yellow gold. Plays well with the Round Box Chain Necklace.",
       "price": "398.00",
       "images": [
-        "/assets/images/men/1/braclet_1.jpg",
-        "/assets/images/men/1/braclet_2.jpg",
-        "/assets/images/men/1/braclet_3.jpg",
-        "/assets/images/men/1/braclet_4.jpg"
+        "/assets/images/men/1/bracelet_1.jpg",
+        "/assets/images/men/1/bracelet_2.jpg",
+        "/assets/images/men/1/bracelet_3.jpg",
+        "/assets/images/men/1/bracelet_4.jpg"
       ]
     },
     {
@@ -23,6 +23,85 @@
         "/assets/images/men/2/necklace_3.jpg",
         "/assets/images/men/2/necklace_4.jpg",
         "/assets/images/men/2/necklace_5.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Curb Chain Bracelet",
+      "description": "An update to a classic made for every day (and everyone). Style it solo or double up, either way it's a statement maker.",
+      "price": "128.00",
+      "images": [
+        "/assets/images/men/3/bracelet_1.jpg",
+        "/assets/images/men/3/bracelet_2.jpg",
+        "/assets/images/men/3/bracelet_3.jpg",
+        "/assets/images/men/3/bracelet_4.jpg",
+        "/assets/images/men/3/bracelet_5.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Flat Curb Chain Bracelet",
+      "description": "The bracelet that you never have to take off, goes with everything, and takes your look to another level—is this one.",
+      "price": "219.00",
+      "images": [
+        "/assets/images/men/4/bracelet_1.jpeg",
+        "/assets/images/men/4/bracelet_2.jpeg",
+        "/assets/images/men/4/bracelet_3.jpeg",
+        "/assets/images/men/4/bracelet_4.jpeg",
+        "/assets/images/men/4/bracelet_5.jpeg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Square Box Chain Bracelet",
+      "description": "Nothing says understated like this chain—no matter how you wear it. Handcrafted in sterling silver with a high polish finish.",
+      "price": "78.00",
+      "images": [
+        "/assets/images/men/5/bracelet_1.jpg",
+        "/assets/images/men/5/bracelet_2.jpg",
+        "/assets/images/men/5/bracelet_3.jpg",
+        "/assets/images/men/5/bracelet_4.jpg",
+        "/assets/images/men/5/bracelet_5.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Courage: Evil Eye Coin Charm Pendant",
+      "description": "Move forward with courage knowing you’re always in good hands. A storied symbol of protection, the evil eye is said to ward off evil by bending it back on the bestower. Expertly handcrafted in recycled 14k solid gold.",
+      "price": "448.00",
+      "images": [
+        "/assets/images/men/6/necklace_1.jpg",
+        "/assets/images/men/6/necklace_2.jpg",
+        "/assets/images/men/6/necklace_3.jpg",
+        "/assets/images/men/6/necklace_4.jpg",
+        "/assets/images/men/6/necklace_5.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Patra Chunky Ring",
+      "description": "Points will be made. Build your look with the strongest shape—and let it embolden everything else. Handcrafted in sterling silver.",
+      "price": "98.00",
+      "images": [
+        "/assets/images/men/7/ring_1.jpg",
+        "/assets/images/men/7/ring_2.jpg",
+        "/assets/images/men/7/ring_3.jpg",
+        "/assets/images/men/7/ring_4.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Black Onyx Pendant Necklace",
+      "description": "Black and gold—a natural fit. Handcrafted in 14k solid yellow gold and black onyx. Plays well with the Black Onyx Square Signet Ring.",
+      "price": "548.00",
+      "images": [
+        "/assets/images/men/8/necklace_1.jpg",
+        "/assets/images/men/8/necklace_2.jpg",
+        "/assets/images/men/8/necklace_3.jpg",
+        "/assets/images/men/8/necklace_4.jpg",
+        "/assets/images/men/8/necklace_5.jpg",
+        "/assets/images/men/8/necklace_6.jpg",
+        "/assets/images/men/8/necklace_7.jpg"
       ]
     }
   ]
