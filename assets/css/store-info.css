@@ -1,0 +1,10 @@
+.store-info .row {
+  padding: 24px 0;
+  border: 1px solid var(--vz-green-light);
+}
+.store-info_items {
+  gap: 40px;
+}
+.store-info_items p {
+  margin: 0;
+}

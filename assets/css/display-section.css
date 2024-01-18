@@ -72,7 +72,7 @@
   padding: 8px 0;
   color: var(--vz-gray-700);
   border: 1px solid var(--vz-gray-700);
-  border-radius: 4px;
+  /*border-radius: 4px;*/
   transition: 0.3s;
 }
 .swiper-slide a:hover {
