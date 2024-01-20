@@ -64,7 +64,7 @@
             </div>
             <div class="swiper displaySwiper">
                 <div class="swiper-wrapper">
-                    {% for item in menJewelryData %}
+                    {% for item in menJewelryData|slice(0, 10) %}
                         <div class="swiper-slide">
                             <div class="display-section_image">
                                 <img src="{{ base_url }}/assets/images/men/{{ item.images[0].filename }}" alt="{{ item.name }}" class="ring-image">
