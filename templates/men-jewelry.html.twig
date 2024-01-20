@@ -19,10 +19,10 @@
                 <div class="col-12">
                     <button data-filter="all">All</button>
                     {% set uniqueFilters = [] %}
-                    {% for ring in ringsData %}
-                        {% if ring.filter not in uniqueFilters %}
-                            <button data-filter="{{ ring.filter }}">{{ ring.filter }}</button>
-                            {% set uniqueFilters = uniqueFilters|merge([ring.filter]) %}
+                    {% for item in menJewelryData %}
+                        {% if item.filter not in uniqueFilters and item.filter is not empty %}
+                            <button data-filter="{{ item.filter }}">{{ item.filter }}</button>
+                            {% set uniqueFilters = uniqueFilters|merge([item.filter]) %}
                         {% endif %}
                     {% endfor %}
                 </div>
