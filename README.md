@@ -1,6 +1,6 @@
 <h1 align="center">PureCarat - Jewelry Webshop</h1>
 
-![Landing page](assets/screens/screen1.png)
+![Landing page](assets/screens/screen2.png)
 
 ## Overview
 
