@@ -63,7 +63,8 @@
   display: flex;
   gap: 12px;
 }
-.swiper-slide a {
+.swiper-slide a,
+.swiper-slide button {
   display: block;
   width: 100%;
   font-size: 15px;
@@ -71,10 +72,12 @@
   text-decoration: none;
   padding: 8px 0;
   color: var(--vz-gray-700);
+  background-color: transparent;
   border: 1px solid var(--vz-gray-700);
   /*border-radius: 4px;*/
   transition: 0.3s;
 }
+.swiper-slide button:hover,
 .swiper-slide a:hover {
   color: var(--vz-gray-100);
   background-color: var(--vz-green-light);
