@@ -22,9 +22,9 @@
         <div class="page-content">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h3>You’ve got an edge - your rings should too.</h3>
-                <a href="{{ base_url }}/rings" class="explore-more">Explore rings</a>
+                <a href="{{ base_url }}/rings" class="explore-more">Explore more</a>
             </div>
-            <div class="swiper ringsSwiper">
+            <div class="swiper displaySwiper">
                 <div class="swiper-wrapper">
                     {% for ring in ringsData.rings %}
                         <div class="swiper-slide">
@@ -57,10 +57,10 @@
     <section class="display-section">
         <div class="page-content">
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <h3>You’ve got an edge - your rings should too.</h3>
-                <a href="{{ base_url }}/rings" class="explore-more">Explore rings</a>
+                <h3>Gifts for him - designed with comfort and style.</h3>
+                <a href="{{ base_url }}/rings" class="explore-more">Explore more</a>
             </div>
-            <div class="swiper ringsSwiper">
+            <div class="swiper displaySwiper">
                 <div class="swiper-wrapper">
                     {% for ring in menJewelryData.menjewelry %}
                         <div class="swiper-slide">
@@ -84,15 +84,13 @@
                     {% endfor %}
                 </div>
                 <div class="swiper-scrollbar"></div>
-                {#<div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>#}
             </div>
         </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".ringsSwiper", {
+        var swiper = new Swiper(".displaySwiper", {
             slidesPerView: 4,
             spaceBetween: 40,
             scrollbar: {
