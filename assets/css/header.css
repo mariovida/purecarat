@@ -10,12 +10,6 @@ nav {
 nav.scrolled {
   height: 50px;
 }
-nav.scrolled .nav-logo {
-  gap: 8px;
-}
-nav.scrolled .nav-logo span {
-  font-size: 20px;
-}
 
 nav .page-content {
   height: 100%;
@@ -23,9 +17,9 @@ nav .page-content {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  width: 50px;
-  height: 80%;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
   transition: 0.3s;
 }
 .nav-logo a {
@@ -38,11 +32,11 @@ nav .page-content {
 }
 .nav-logo span {
   font-family: ff-fancy;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 18px;
   color: var(--vz-beige);
   margin-top: 4px;
-  transition: 0.3s;
+  user-select: none;
 }
 nav a,
 nav button {
