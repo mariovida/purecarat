@@ -1,5 +1,7 @@
 <h1 align="center">PureCarat - Jewelry Webshop</h1>
 
+![Landing page](assets/screens/screen1.png)
+
 ## Overview
 
 PureCarat is a webshop project developed for selling exquisite jewelry. It is built using PHP and Twig for templating.
