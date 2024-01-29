@@ -17,10 +17,11 @@
         <div class="page-content">
             <div class="row">
                 <div class="col-12">
+                    <button data-filter="all">All</button>
                     {% set uniqueFilters = [] %}
                     {% for ring in ringsData %}
                         {% if ring.filter not in uniqueFilters %}
-                            <button>{{ ring.filter }}</button>
+                            <button data-filter="{{ ring.filter }}">{{ ring.filter }}</button>
                             {% set uniqueFilters = uniqueFilters|merge([ring.filter]) %}
                         {% endif %}
                     {% endfor %}

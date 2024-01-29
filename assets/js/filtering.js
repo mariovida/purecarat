@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   $(".filters button").on("click", function () {
-    var selectedFilter = $(this).text().trim();
+    var selectedFilter = $(this).data("filter");
 
-    if (selectedFilter === "All") {
+    if (selectedFilter === "all") {
       $(".ring-item").show();
     } else {
       $(".ring-item").hide();
