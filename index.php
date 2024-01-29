@@ -84,4 +84,9 @@ if ($uri === $base_url.'/') {
         'ringsData' => $ringsData,
         'ringImages' => $ringImages,
     ]);
+} else if ($uri === $base_url.'/men-jewelry') {
+    echo $twig->render('men-jewelry.html.twig', [
+        'menJewelryData' => $menJewelryData,
+        'menJewelryImages' => $menJewelryImages,
+    ]);
 }
