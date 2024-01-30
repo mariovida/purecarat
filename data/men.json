@@ -103,6 +103,19 @@
         "/assets/images/men/8/necklace_6.jpg",
         "/assets/images/men/8/necklace_7.jpg"
       ]
+    },
+    {
+      "id": 9,
+      "name": "Slim Rectangular Signet Ring",
+      "description": "Let your hands do the talking with a statement signet. Handcrafted in black titanium that achieves its color due to zirconium in the alloy.",
+      "price": "148.00",
+      "images": [
+        "/assets/images/men/9/ring_1.jpg",
+        "/assets/images/men/9/ring_2.jpg",
+        "/assets/images/men/9/ring_3.jpg",
+        "/assets/images/men/9/ring_4.jpg",
+        "/assets/images/men/9/ring_5.jpg"
+      ]
     }
   ]
 }
