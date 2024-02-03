@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+  height: 800px;
+  background-color: var(--vz-image-bg);
+}
+.hero .row {
+  height: 800px;
+}
+.hero h1 {
+  font-family: ff-signature;
+  font-size: 80px;
+  color: var(--vz-header-bg);
+  margin-bottom: 16px;
+}
+.hero h2 {
+  max-width: 620px;
+  font-size: 20px;
+}
+.hero_illustration {
+  height: 600px;
+  animation: floatAnimation 6s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translate(-5px, 0);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "rings": [
+    {
+      "id": 1,
+      "name": "Duo Beaded Stacker Ring",
+      "description": "To answer your question, yes, every jewelry wardrobe requires a beaded ring. It’s our iconic texture that’s loved and stacked by all—so we had no choice but to double it. More is more. Handcrafted in 18k gold vermeil.",
+      "price": "48.00",
+      "images": [
+        "/assets/images/rings/1/ring_1.jpg",
+        "/assets/images/rings/1/ring_2.jpg",
+        "/assets/images/rings/1/ring_3.jpg",
+        "/assets/images/rings/1/ring_4.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Celestial Sapphire Ring",
+      "description": "The ideal band for your next chapter. Lightweight, wearable and enduring, it’s the perfect piece to symbolize your unbreakable bond. Or, to bring in as a permanent part of your ring stack—it’s made to last a lifetime. Handcrafted in recycled 14k solid gold featuring domed edges.",
+      "price": "498.00",
+      "images": [
+        "/assets/images/rings/2/ring_1.jpg",
+        "/assets/images/rings/2/ring_2.jpg",
+        "/assets/images/rings/2/ring_3.jpg",
+        "/assets/images/rings/2/ring_4.jpg",
+        "/assets/images/rings/2/ring_5.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Stacker Ring",
+      "description": "The Stacker is the white tee of rings. It is everyone's go-to because there's nothing it can't go with (trust us). This 14k solid gold essential is the perfect starter ring or addition to anyone's collection.",
+      "price": "88.00",
+      "images": [
+        "/assets/images/rings/3/ring_1.jpg",
+        "/assets/images/rings/3/ring_2.jpg",
+        "/assets/images/rings/3/ring_3.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Daily Stacker Ring",
+      "description": "Every wardrobe needs its foundational basics. Like a classic white shirt, you’ll keep this ring on rotation. Handcrafted in vermeil, a thick 18k gold layer on sterling silver. They’re polished and easy with high-impact shine—exactly what you were looking for.",
+      "price": "48.00",
+      "images": [
+        "/assets/images/rings/4/ring_1.jpg",
+        "/assets/images/rings/4/ring_2.jpg",
+        "/assets/images/rings/4/ring_3.jpg",
+        "/assets/images/rings/4/ring_4.jpg",
+        "/assets/images/rings/4/ring_5.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Metallic Sphere Ring",
+      "description": "A bold statement maker with the timelessness of a good white T. Handcrafted in 18k gold vermeil.",
+      "price": "53.00",
+      "images": [
+        "/assets/images/rings/5/ring_1.jpg",
+        "/assets/images/rings/5/ring_2.jpg",
+        "/assets/images/rings/5/ring_3.jpg",
+        "/assets/images/rings/5/ring_4.jpg"
+      ]
+    }
+  ]
+}

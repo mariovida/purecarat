@@ -1,0 +1,55 @@
+<nav id="mainNav">
+    <div class="page-content">
+        <div class="d-flex justify-content-between align-items-center h-100">
+            <div class="nav-logo">
+                <a href="{{ base_url }}"><img src="{{ base_url }}/assets/images/logo.svg" alt="Logo" /></a>
+                <span>PureCarat</span>
+            </div>
+            <div>
+                <a href="#">NEW</a>
+                <a href="#">BEST SELLERS</a>
+                <a href="#">EARRINGS</a>
+                <a href="#">RINGS</a>
+                <a href="#">NECKLACES</a>
+                <button class="cart-btn"><img src="{{ base_url }}/assets/icons/cart.svg" /></button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="cartContainer" class="cart-container">
+    <div class="cart-content">
+        <div class="cart-header d-flex">
+            <p>Your shopping cart</p>
+            <button id="closeCartBtn">&times;</button>
+        </div>
+        <div class="cart-bag">
+            {% set n = 1 %}
+            {% set total = 0 %}
+            {% for ring in ringsData.rings %}   
+                {% if n < 4 %}
+                    <div class="cart-item d-flex">
+                        <div class="cart-item_img">
+                            <img src="{{ base_url ~ ring.images[0] }}" alt="{{ ring.name }}">
+                        </div>
+                        <div class="cart-item_info d-flex flex-column justify-content-between">
+                            <p class="cart-item_info_name">{{ ring.name }}</p>
+                            <p class="cart-item_info_price">€{{ ring.price }}</p>
+                        </div>
+                    </div>
+                    {% set total = total + ring.price|number_format(2, '.', ',') %}
+                {% endif %}
+            {% set n = n + 1 %}
+            {% endfor %}
+        </div>
+        <div class="cart-total d-flex justify-content-between align-items-center">
+            <p>Total:</p>
+            <p>{{ total|number_format(2, '.', ',')  }} EUR</p>
+        </div>
+        <a href="{{ base_url }}" class="checkout-btn">CHECKOUT</a>
+    </div>
+</div>
+
+<div id="overlay"></div>
+
+<script src="{{ base_url }}/assets/js/nav.js"></script>

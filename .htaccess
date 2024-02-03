@@ -1,0 +1,33 @@
+RewriteEngine on
+RewriteBase /purecarat/
+
+# Redirect URLs with .html extension to non-extension URLs
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ %1 [L,R=301]
+
+# Rewrite non-extension URLs to corresponding .html files
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [L]
+
+# Redirect URLs with query parameters i=[^&]+ to URLs without the query parameters
+RewriteCond %{QUERY_STRING} ^i=[^&]+ [NC]
+RewriteRule ^ %{REQUEST_URI}? [R=301,L]
+
+# Redirect requests for PHP files to non-extension URLs
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=302,L,NE]
+
+# Internally redirect /dir/foo to /dir/foo.php
+RewriteCond %{REQUEST_FILENAME}.php -f [NC]
+RewriteRule ^ %{REQUEST_URI}.php [L]
+
+# Handle requests to the public directory
+RewriteRule ^public/(.*)$ /public/$1 [L]
+
+# Your existing rules go here...
+
+# If none of the above rules match, internally redirect to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]

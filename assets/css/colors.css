@@ -1,0 +1,18 @@
+:root {
+  --vz-gray-dark: #343a40;
+  --vz-gray-100: #f8f8f8;
+  --vz-gray-200: #f5f5f5;
+  --vz-gray-300: #eee;
+  --vz-gray-400: #ced4da;
+  --vz-gray-500: #ababab;
+  --vz-gray-600: #7e7e7e;
+  --vz-gray-700: #495057;
+  --vz-gray-800: #343a40;
+  --vz-gray-900: #212529;
+  --vz-beige: #f2f0e9;
+  --vz-main-bg: #e8edf8;
+  --vz-header-bg: #476b58;
+  --vz-green-light: #527a65;
+  --vz-green-dark: #3d5c4b;
+  --vz-image-bg: #faf7f2;
+}
