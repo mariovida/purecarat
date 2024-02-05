@@ -21,7 +21,11 @@
                     {% set uniqueFilters = [] %}
                     {% for earring in earringsData %}
                         {% if earring.filter not in uniqueFilters %}
-                            <button data-filter="{{ earring.filter }}">{{ earring.filter }}</button>
+                            {% if earring.filter == 'drop' %}
+                                <button data-filter="{{ earring.filter }}">DROPS</button>
+                            {% else %}
+                                <button data-filter="{{ earring.filter }}">{{ earring.filter }}</button>
+                            {% endif %}
                             {% set uniqueFilters = uniqueFilters|merge([earring.filter]) %}
                         {% endif %}
                     {% endfor %}

@@ -204,7 +204,7 @@ if ($uri === $base_url.'/') {
         $earringsImagesByItemId[$jewelryId][] = $image;
     }
     $twig->addGlobal('isCategoryPage', true);
-
+    
     echo $twig->render('single/item.html.twig', [
         'category' => 'earrings',
         'itemData' => $itemData,
