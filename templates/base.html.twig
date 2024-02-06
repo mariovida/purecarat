@@ -14,5 +14,6 @@
         <main {% if isCategoryPage %} class="single-item-page"{% endif %}>
             {% block body %}{% endblock %}
         </main>
+        {{ include('partials/footer.html.twig') }}
     </body>
 </html>

@@ -2,6 +2,7 @@
 @import "fonts.css";
 
 @import "header.css";
+@import "footer.css";
 @import "breadcrumbs.css";
 @import "filters.css";
 @import "404.css";
@@ -48,8 +49,8 @@ body::-webkit-scrollbar-thumb {
   max-width: 1280px;
 }
 h3 {
-  font-family: ff-fancy;
-  font-size: 28px;
+  font-family: ff-title;
+  font-size: 42px;
   color: var(--vz-header-bg);
   margin: 0;
   user-select: none;
