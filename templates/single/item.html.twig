@@ -82,7 +82,15 @@
         {% set imagePath = 'earrings' %}
         {% set linkPath = 'earrings' %}
     {% endif %}
-    {{ include('blocks/related.html.twig') }}
+    {% set showRelated = 0 %}
+    {% for item in relatedData %}
+        {% if itemData.id != item.id and itemData.filter == item.filter %}
+            {% set showRelated = 1 %}
+        {% endif %}
+    {% endfor %}
+    {% if showRelated == 1 %}
+        {{ include('blocks/related.html.twig') }}
+    {% endif %}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
