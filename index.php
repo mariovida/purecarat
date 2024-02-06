@@ -151,7 +151,7 @@ if ($uri === $base_url.'/') {
         'category' => 'ring',
         'itemData' => $itemData,
         'images' => $ringImages,
-        'isCategoryPage' => true,
+        'relatedData' => $ringsData,
     ]);
 } elseif (preg_match('#^'.$base_url.'/category/men-jewelry/(\d+)$#', $uri, $matches)) {
     $itemId = $matches[1];
@@ -180,6 +180,7 @@ if ($uri === $base_url.'/') {
         'category' => 'men-jewelry',
         'itemData' => $itemData,
         'images' => $menJewelryImages,
+        'relatedData' => $menJewelryData,
     ]);
 } elseif (preg_match('#^'.$base_url.'/category/earrings/(\d+)$#', $uri, $matches)) {
     $itemId = $matches[1];
@@ -208,6 +209,7 @@ if ($uri === $base_url.'/') {
         'category' => 'earrings',
         'itemData' => $itemData,
         'images' => $earringsImages,
+        'relatedData' => $earringsData,
     ]);
 } else {
     echo $twig->render('404.html.twig');

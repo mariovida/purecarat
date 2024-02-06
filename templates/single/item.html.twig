@@ -72,6 +72,16 @@
         </div>
     </section>
 
+    {% if category == 'ring' %}
+        {% set imagePath = 'rings' %}
+        {% set linkPath = 'rings' %}
+    {% elseif category == 'men-jewelry' %}
+        {% set imagePath = 'men' %}
+        {% set linkPath = 'men-jewelry' %}
+    {% elseif category == 'earrings' %}
+        {% set imagePath = 'earrings' %}
+        {% set linkPath = 'earrings' %}
+    {% endif %}
     {{ include('blocks/related.html.twig') }}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -88,5 +98,17 @@
                 draggable: true
             },
         });
+        var swiper = new Swiper(".relatedSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 40,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                draggable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });        
     </script>
 {% endblock %}
