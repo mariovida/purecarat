@@ -1,6 +1,6 @@
 footer {
   margin-top: 60px;
-  padding: 60px 0;
+  padding: 60px 0 40px;
   background-color: var(--vz-green-light);
   border-top: 5px solid var(--vz-green-dark);
 }
@@ -14,17 +14,23 @@ footer {
   color: var(--vz-gray-100);
   margin-bottom: 16px;
 }
-.footer-links a {
+.footer-links a,
+.footer-legal a {
   display: inline-block;
   font-size: 15px;
   text-decoration: none;
   color: var(--vz-gray-100);
   margin-bottom: 6px;
 }
-.footer-links a:last-of-type {
+.footer-links a:hover,
+.footer-legal a:hover {
+  color: var(--vz-gray-400);
+}
+/*.footer-links a:last-of-type {
   margin: 0;
 }
-.footer-links a::after {
+.footer-links a::after,
+.footer-legal a::after {
   content: "";
   display: block;
   width: 0;
@@ -32,14 +38,41 @@ footer {
   background: var(--vz-gray-100);
   transition: width 0.3s;
 }
-.footer-links a:hover::after {
+.footer-links a:hover::after,
+.footer-legal a:hover::after {
   width: 90%;
-}
+}*/
 .footer-newsletter p {
   font-size: 15px;
   color: var(--vz-gray-100);
 }
+.footer-newsletter form {
+  display: flex;
+  gap: 4px;
+}
+.footer-newsletter form input[type="email"] {
+  width: 100%;
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: var(--vz-gray-100);
+  border: 0;
+  outline: 0;
+}
+.footer-newsletter form button {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  background-color: var(--vz-gray-300);
+  border: 1px solid var(--vz-gray-300);
+  outline: 0;
+  transition: 0.2s;
+}
+.footer-newsletter form button:hover {
+  background-color: var(--vz-gray-400);
+  border-color: var(--vz-gray-400);
+}
 .footer-legal {
+  gap: 32px;
   margin-top: 32px;
   padding-top: 24px;
   border-top: 1px solid var(--vz-gray-100);
