@@ -7,7 +7,7 @@
   background-color: var(--vz-beige-dark);
 }
 .store-info_items {
-  gap: 64px;
+  gap: 112px;
 }
 .store-info_item img {
   width: 40px;
