@@ -92,6 +92,25 @@
         {{ include('blocks/related.html.twig') }}
     {% endif %}
 
+    <section class="tab-section">
+        <div class="page-content">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="openTab('description')">Description</button>
+                <button class="tab-button" onclick="openTab('materials')">Reviews</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="description">
+                    <h6>Description</h6>
+                    <p>{{ itemData.description|nl2br }}</p>
+                </div>
+                <div class="tab-pane" id="materials">
+                    <h6>Reviews</h6>
+                    <p>sedfasfsd</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.itemSwiper', {
@@ -117,6 +136,21 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-        });        
+        });
+
+        // TABS
+        function openTab(tabName) {
+            var i;
+            var tabContent = document.getElementsByClassName("tab-pane");
+             var tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.target.classList.add("active");
+        }
     </script>
 {% endblock %}

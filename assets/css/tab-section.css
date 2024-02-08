@@ -1,0 +1,19 @@
+.tab-section .tab-buttons {
+  border-bottom: 2px solid var(--vz-header-bg);
+}
+.tab-section .tab-buttons button {
+  padding: 4px 12px;
+  margin-right: 8px;
+  background-color: transparent;
+  border: 0;
+}
+.tab-section .tab-buttons button.active {
+  border-bottom: 3px solid var(--vz-header-bg);
+}
+.tab-section .tab-content {
+  padding: 24px 12px;
+}
+.tab-section .tab-content h6 {
+  font-family: ff-title;
+  font-size: 28px;
+}
